@@ -28,7 +28,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:10px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -39,18 +39,19 @@ body {
 #menu{
     text-align: center;
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .menuButton{
-    font-size: 20px;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
     width: 200px;
     margin: 5px;
     }
 
 #btnMenu{
     width: 190px;
-    font-size: 20px;
+    font-size: 18px;
     margin: 10px;
 }
 
@@ -58,7 +59,7 @@ body {
     width: 60px;
     height: 60px;
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #question{
@@ -72,13 +73,13 @@ body {
 #btnClear{
     width: 125px;
     height: 60px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #btnCheckAnswer{
     width: 190px;
     height: 60px;    
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
 }
 
@@ -107,7 +108,7 @@ body {
 #incorrect{
     display: none;
     text-align: center;
-    margin: 0px; 
+    margin: 0px;
     background-color: red;
     background-attachment: fixed;
     position: absolute;
@@ -125,6 +126,6 @@ body {
 }
 
 #score{
-    font-size: 20px;
+    font-size: 18px;
     margin: 10px;    
 }
