@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+        
+        <link rel="stylesheet" type="text/css" href="css/kma.css"/>
+
+        <script src="js/main.js"></script>
+    </head>
+    <body onload="resetScore()">
+
+        <div id="menu">
+            Welcome To Katie's Math App!
+            <br/>
+            What would you like to do?
+            <br/>
+                <input type="button"  value="Addition" id="btnAdd" class="menuButton" onclick="showMain('addition')">        
+            <br/>
+                <input type="button" value="Subtraction" id="btnSub" class="menuButton" onclick="showMain('subtraction')">
+            <br/>
+                <input type="button" value="Multiplication" id="btnMult" class="menuButton" onclick="showMain('multiplication')">
+            <br/>
+                <input type="button" value="Division" id="btnDiv" class="menuButton" onclick="showMain('division')">
+            <br/>
+                <input type="button" value="Reset Score" id="btnResetScore" class="menuButton" onclick="resetScore()"/>
+             
+        </div>
+       
+        <div id="main" style="display:none; text-align: center; margin-top: 50px;">
+            <span id="question"></span><span id="answer"></span>
+            <br/>
+                <div id="keypad" class="keypad" >
+                    <input type="button" value="1" id="btn1" class="btnKeypad" onclick="updateAnswer(1)">
+                    <input type="button" value="2" id="btn2" class="btnKeypad" onclick="updateAnswer(2)">
+                    <input type="button" value="3" id="btn3" class="btnKeypad" onclick="updateAnswer(3)">
+                    <br/>
+                    <input type="button" value="4" id="btn4" class="btnKeypad" onclick="updateAnswer(4)">
+                    <input type="button" value="5" id="btn5" class="btnKeypad" onclick="updateAnswer(5)">
+                    <input type="button" value="6" id="btn6" class="btnKeypad" onclick="updateAnswer(6)">
+                    <br/>
+                    <input type="button" value="7" id="btn7" class="btnKeypad" onclick="updateAnswer(7)">
+                    <input type="button" value="8" id="btn8" class="btnKeypad" onclick="updateAnswer(8)">
+                    <input type="button" value="9" id="btn9" class="btnKeypad" onclick="updateAnswer(9)">
+                    <br/>
+                    <input type="button" value="0" id="btn0" class="btnKeypad" onclick="updateAnswer(0)">
+                    <input type="button" value="Clear" id ="btnClear" onclick="clearAnswer()"/>
+                    <br/>
+                    <input type="button" value="Enter" id="btnCheckAnswer" onclick="checkAnswer()">
+                </div>
+            <p>
+                <input type="button" value="Menu" id="btnMenu" onclick="showMenu()">
+            </p>
+        </div>
+                 
+        <div id="correct" >
+            <span id="correctText">
+                Correct!
+            </span>
+            
+        </div>
+        
+        <div id="incorrect" >
+            
+            <span id="incorrectText">
+                Nice Try!
+            </span>           
+        </div>  
+        
+        <div id="score" style="bottom: 0px; width:100%;  text-align: center; padding-bottom: 10px;">
+                    <span id="scoreMessage"></span>
+                 
+                </div>    
+      
+    </body>
+</html>
