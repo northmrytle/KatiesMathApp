@@ -47,7 +47,8 @@
                 <input type="button" value="Division" id="btnDiv" class="menuButton" onclick="showMain('division')">
             <br/>
                 <input type="button" value="Reset Score" id="btnResetScore" class="menuButton" onclick="resetScore()"/>
-             
+            <br/>
+                <img id="btnSettings" src="img/settings.png" alt="Settings" onclick='showSettings()'>
         </div>
        
         <div id="main" style="display:none; text-align: center; margin-top: 50px;">
@@ -92,9 +93,20 @@
         </div>  
         
         <div id="score" style="bottom: 0px; width:100%;  text-align: center; padding-bottom: 10px;">
-                    <span id="scoreMessage"></span>
-                 
-                </div>    
+            <span id="scoreMessage"></span>
+        </div>
+        
+        <div id='settings'>
+            Maximum Addition Value
+            <input type='text' id='maxAddition' class='settingValue' value='' size='5'/><br/>
+            Maximum Subtraction Value
+            <input type='text' id='maxSubtraction' class='settingValue' value='' size='5'/><br/>
+            Maximum Multiplication Value
+            <input type='text' id='maxSMultiplication' class='settingValue' value='' size='5'/><br/>
+            Maximum Division Value
+            <input type='text' id='maxDivision' class='settingValue' value='' size='5'/><br/>
+            <input type='button' id='saveSettings' class='menuButton' value='Save' onclick='saveSettings();'/>
+        </div>
       
     </body>
 </html>

@@ -41,8 +41,8 @@ function getNextQuestion(){
         question =  a + ' X ' + b + ' = ' ;
     }
     if (mode=='division') {
-        b = Math.floor((Math.random() * 10) + 1);
-        a = b * Math.floor((Math.random() * 10) + 1);
+        b = Math.floor((Math.random() * 100) + 1);
+        a = b * Math.floor((Math.random() * 100) + 1);
         question =  a + ' &divide ' + b + ' = ' ;
     }
     document.getElementById('question').innerHTML = question;
@@ -114,4 +114,22 @@ function resetScore(){
     correct = 0;
     incorrect = 0;
     updateScore();
+}
+
+function showSettings(){
+    document.getElementById('settings').style.display = 'block';
+    document.getElementById('menu').style.display = 'none';
+    document.getElementById('maxAddition').value = localStorage.maxAdditionValue;
+    document.getElementById('maxSubtraction').value = localStorage.maxSubtractionValue;
+    document.getElementById('maxMultiplication').value = localStorage.maxMultiplicationValue;
+    document.getElementById('maxDvision').value = localStorage.maxDivisionValue;
+}
+
+function saveSettings(){
+    localStorage.maxAdditionValue = document.getElementById('maxAddition').value;
+    localStorage.maxSubtractionValue = document.getElementById('maxSubtraction').value; 
+    localStorage.maxMultiplicationValue = document.getElementById('maxMultiplication').value; 
+    localStorage.maxDivisionValue = document.getElementById('maxDivision').value; 
+    document.getElementById('settings').style.display = "none";
+    document.getElementById('menu').style.display = "block";
 }
